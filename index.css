@@ -1,0 +1,292 @@
+@charset "utf-8";
+
+/*整體版面*/
+body {
+	font-family: Arial, sans-serif;
+	margin: 0;
+	padding: 0;
+	background-color: #f5faff;
+}
+
+/*------------左側導覽列樣式設定-----------------*/
+.sidebar {
+	width: 200px;
+	background-color: #e8f1fb;
+	position: fixed;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	padding-top: 20px;
+	border-right: 2px solid #b0cbe9;
+}
+
+.sidebar img {
+  display: block;
+  margin: 0 auto 10px;
+}
+
+.sidebar ul {
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar ul > li {
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #7DA4CC;
+  position: relative;
+  flex-wrap: wrap; /* ⬅ 關鍵：允許內部換行，不撐壞外框 */
+
+}
+
+
+.sidebar ul > li span {
+  display: flex;
+  align-items: center;
+}
+
+.sidebar ul > li img {
+  width: 18px;
+  height: 18px;
+  margin-right: 8px;
+  margin-top: 3px;
+}
+
+.sidebar li:hover {
+  background-color: #d6e6f8;
+}
+
+/*-----子項目設定-----*/
+.nested-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 6px 10px;
+  width: 190px;
+  box-sizing: border-box;
+  color: #7DA4CC;
+}
+
+/* 讓文字區塊 + 原點向左排列並佔滿左邊空間 */
+.text {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex: 1; 	
+}
+
+/* 原點樣式 */
+.text .dot {
+  color: #7DA4CC;
+  font-size: 16px;
+  margin-left: 20px;
+}
+
+/* 箭頭靠右，保持寬度 */
+.arrow {
+  font-weight: bold;
+  min-width: 10px;
+  text-align: right;
+}
+
+/*-------------------主要內容區-------------------------------*/
+.main {
+	margin-left: 200px;
+	padding: 0px;
+}
+
+/*-------右上方儀錶板+時間區塊---------*/
+.top-bar {
+	background-color: #fff;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 10px 20px;
+	height: 20px;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* 加底框陰影 */
+}
+
+.left-group, .right-group {
+	display: flex;
+	align-items: center;
+	gap: 10px; /* 左右項目間間距 */
+}
+
+.top-bar p {
+	font-size: 14px;
+	color: #555;
+}
+
+/*-------顯示統計區塊---------*/
+.info-boxes {
+	display: flex;
+	justify-content: space-between;
+	margin: 20px;
+	gap: 10px;
+}
+
+.info-box {
+	flex: 1;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 20px 12px;
+	border-radius: 8px;
+	color: white;
+	font-size: 14px;
+}
+
+.info-box img {
+	width: 24px;
+	height: 24px;
+	margin-right: 8px;
+}
+
+.info-box span {
+	flex: 1;
+	line-height: 1.4;
+}
+
+.info-box p {
+	display: inline;
+	font-size: 35px;
+	margin: 0;
+	margin-left: 10px;
+}
+
+.info-box.blue {
+	background-color: #3a89c9;
+}
+
+.info-box.orange {
+	background-color: #d98c11;
+}
+
+.info-box.green {
+	background-color: #4d9e3a;
+}
+
+/*-------顯示圖表區塊---------*/
+.chart-section {
+	display: flex;
+	justify-content: center;
+	margin: 20px;
+}
+
+.chart-section .chart {
+	flex: 1;
+	border-radius: 8px;
+	padding: 10px;
+	text-align: center;
+}
+
+.chart-section p {
+	background-color: #3D78BC;
+	color: #fff;
+	padding: 10px;
+	text-align: center;
+	border-radius: 8px 8px 0px 0px;
+	margin-bottom:5px ;
+}
+
+.chart-section .chart-box {
+	background-color: white;
+	padding: 10px;
+	border-radius: 0 0 12px 12px;
+	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.chart-box img {
+	width: 95%;
+	height: auto;
+	display: block;
+}
+
+/*-------顯示表格區塊---------*/
+.record_title {
+	background-color: #3D78BC;
+	color: #fff;
+	padding: 5px;
+	text-align: center;
+	border-radius: 8px 8px 0px 0px;
+	margin:20px auto 0px auto;
+	margin-bottom: 0px;
+	width: 95%;
+}
+
+.record_all {
+	padding: 5px;
+	margin: 0px auto 0px auto;
+	background-color: white;
+	width: 95%;
+	box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.record-table {
+	width: 100%;
+	border-collapse: separate;
+	border-spacing: 0 2px; 	/*控制每列之間的間隔*/
+	background-color: white;
+	box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+
+.record-table th {
+	padding: 6px;
+	text-align: center;
+	font-size: 15px;
+	background-color: #C8DDF3;
+	color: #3D78BC;
+	font-weight: bold;
+	border: 1px solid #fff;
+}
+
+.record-table td {
+	padding: 6px;
+	text-align: center;
+	font-size: 15px;
+	background-color: #ffffff;
+}
+
+.record-table img {
+	padding: 0px;
+	width: 50px;
+	height: 50px;
+	object-fit: cover;
+	border-radius: 4px;
+	display: block; /* ✅ 避免底部空隙 */
+	margin: 0 auto;  /* ✅ 若要置中可加 */
+}
+
+.record-table .gray-row td {
+	background-color: #E3E6EB;
+}
+
+.record-table .pink td {
+	background-color: #FAE2E0;
+}
+
+/*-------頁尾區塊---------*/
+footer {
+	position: relative;
+	height: 30px;
+	text-align: center;
+	line-height: 30px;
+	padding: 10px 20px;
+}
+footer img {
+	position: absolute;
+	right: 20px;
+	top: 50%;
+	transform: translateY(-50%);
+	width: 120px;
+	height: 30px;
+}
+
+footer p {
+	margin: 0px;
+	font-size: 14px;
+	color: #ccc;
+}

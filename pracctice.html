@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>練習網頁</title>
+	<style>
+		@import url(./index.css);
+	</style>
+</head>
+<body>
+<!-- 左側導覽列 -->
+<div class="sidebar">
+	<img src="./images/LOGO_forward.jpg" width="160" height="45" alt="logo">
+	<ul>
+		<li><span><img src="./images/Dashboard_icon.png">儀錶板</span><span class="arrow">&gt;</span></li>
+		<li><span><img src="./images/Kanban_icon.png">看板管理</span><span class="arrow">&gt;</span></li>
+
+			<li>
+				<span><img src="./images/data_icon.png">資料管理</span><span class="arrow">&gt;</span>
+				<ul class="nested-list">
+					<li>
+						<span class="text"><span class="dot">•</span>人員管理</span>
+						<span class="arrow">&gt;</span>
+					</li>
+					<li>
+						<span class="text"><span class="dot">•</span>車輛管理</span>
+						<span class="arrow">&gt;</span>
+					</li>
+					<li>
+						<span class="text"><span class="dot">•</span>日曆管理</span>
+						<span class="arrow">&gt;</span>
+					</li>
+					<li>
+						<span class="text"><span class="dot">•</span>出勤管理</span>
+						<span class="arrow">&gt;</span>
+					</li>
+					<li>
+						<span class="text"><span class="dot">•</span>門禁管理</span>
+						<span class="arrow">&gt;</span>
+					</li>
+					<li>
+						<span class="text"><span class="dot">•</span>資材管理</span>
+						<span class="arrow">&gt;</span>
+					</li>
+					<li>
+						<span class="text"><span class="dot">•</span>費用管理</span>
+						<span class="arrow">&gt;</span>
+					</li>
+				</ul>
+			</li>
+
+		<li><span><img src="./images/share_icon.png">推送管理</span><span class="arrow">&gt;</span></li>
+		<li><span><img src="./images/Permissions_icon.png">權限管理</span><span class="arrow">&gt;</span></li>
+	</ul>
+</div>
+
+
+    <!-- 主要內容區域 -->
+	<div class="main">
+		<div class="top-bar">
+			<div class="left-group">
+				<img src="./images/bars.png" alt="Data">
+				<p>儀錶板</p>
+			</div>
+			<div class="right-group">
+				<p>當前時間: 2025/04/23 09:47:08</p>
+				<img src="./images/people-circle.png" alt="Data">
+				<p>admin</p>
+			</div>
+		</div>
+
+		<!-- 上方統計區塊 -->
+		<div class="info-boxes">
+			<div class="info-box blue">
+				<img src="./images/button_people.png" alt="User">
+				<span>今日入場數</span>
+				<p>0</p>
+			</div>
+			<div class="info-box orange">
+				<img src="./images/danger.png" alt="Warning">
+				<span>今日累計<br>未戴安全帽次數</span>
+				<p>0</p>
+			</div>
+			<div class="info-box orange">
+				<img src="./images/danger.png" alt="Warning">
+				<span>今日累計<br>危險區域警報次數</span>
+				<p>0</p>
+			</div>
+			<div class="info-box green">
+				<img src="./images/danger.png" alt="Warning">
+				<span>本週累計<br>未戴安全帽次數</span>
+				<p>0</p>
+			</div>
+			<div class="info-box green">
+				<img src="./images/danger.png" alt="Warning">
+				<span>本週累計<br>危險區域警報次數</span>
+				<p>0</p>
+			</div>
+		</div>
+
+    	<!-- 圖表區塊 -->
+		<div class="chart-section">
+			<div class="chart">
+				<p>場域人員估比（長條圖）</p>
+				<div class="chart-box">
+					<img src="./images/picture1.png" alt="Data">
+				</div>
+			</div>
+			
+			<div class="chart">
+				<p>場域人員估比（餅圖）</p>
+				<div class="chart-box">
+					<img src="./images/picture2.png" alt="Data">
+				</div>
+			</div>
+		</div>
+
+    	<!-- 紀錄表格 -->
+    	<p class="record_title">紀錄</p>
+    	<div class="record_all">
+			<table class="record-table">
+				<thead>
+					<tr class="sub-header">
+						<th>人臉識別</th>
+						<th>姓　名</th>
+						<th>進場時間</th>
+						<th>出場時間</th>
+						<th>滯留時間</th>
+						<th>聯安卡</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td><img src="./images/people_head.png" alt="丁小雨"></td>
+						<td>丁小雨</td>
+						<td>2025/03/19 19:10</td>
+						<td>2025/03/19 19:10</td>
+						<td>00:30:00</td>
+						<td>115030218</td>
+					</tr>
+					<tr class="gray-row">
+						<td><img src="./images/people_head.png" alt="王大成"></td>
+						<td>王大成</td>
+						<td>2025/03/19 19:10</td>
+						<td>2025/03/19 19:10</td>
+						<td>00:30:00</td>
+						<td>115030218</td>
+					</tr>
+					<tr class="pink">
+						<td><img src="./images/people_head.png" alt="不明人"></td>
+						<td>不明人</td>
+						<td>2025/03/19 19:10</td>
+						<td>2025/03/19 19:10</td>
+						<td>00:30:00</td>
+						<td>115030218</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+
+	<footer>
+		<p>Copyright © 2024 Microsys. All Rights Reserved. Microsys RPE</p>
+		<img src="./images/LOGO_down.png" alt="Data">
+	</footer>
+</body>
+</html>
